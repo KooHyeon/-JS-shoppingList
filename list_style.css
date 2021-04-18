@@ -47,13 +47,29 @@ body {
 
 .list-items {
     list-style-type: none;
-    margin-top: 27px;
-    margin-left: 45px;
+    margin-top: 28px;
+    margin-left: 21px;
     padding-left: 0;
     font-family: 'Nanum Gothic', sans-serif;
     font-size: var(--main-text-size-regular);
     color: var(--main-text-color);
-    line-height: 1.4rem;
+    line-height: 1.2;
+}
+
+.list-items div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 22px;
+}
+
+.delete-btn {
+    background-image: url(./assets/list_deleteBtn.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width:18px;
+    height: 18px;
+    border: none;
+    margin-right: 10px;
 }
 
 .input-field {

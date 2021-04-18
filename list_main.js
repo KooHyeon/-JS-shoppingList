@@ -12,16 +12,21 @@ form.addEventListener('submit', (e)=>{
 });
 
 
-inputField.addEventListener('keyup', (e) => {
+inputField.addEventListener('keydown', (e) => {
     if (e.keyCode === 13) {
         addList(e);
     }
 });
 
 function addList(e){
-    const listItem = document.createElement('li');
-    listItem.textContent = e.target.value;
+    const listItem = document.createElement('div');
+    const itemText = document.createElement('li');
+    const deleteBtn = document.createElement('button');
+    itemText.textContent = e.target.value;
+    deleteBtn.classList.add('delete-btn');
     items.appendChild(listItem);
+    listItem.appendChild(deleteBtn);
+    listItem.appendChild(itemText);
     e.target.value = "";
 }
 
