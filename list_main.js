@@ -4,6 +4,7 @@ const list = document.querySelector('.list');
 const inputField = document.querySelector('.input-field');
 const normalRunji = document.querySelector('.normal');
 const angryRunji = document.querySelector('.angry');
+const items = document.querySelector('.list-items');
 const form = document.querySelector('form');
 
 form.addEventListener('submit', (e)=>{
@@ -12,12 +13,15 @@ form.addEventListener('submit', (e)=>{
 
 
 inputField.addEventListener('keyup', (e) => {
-    e.preventDefault();
     if (e.keyCode === 13) {
-        check(e);
+        addList(e);
     }
 });
 
-function check (e) {
-    console.log(e.target.value);
+function addList(e){
+    const listItem = document.createElement('li');
+    listItem.textContent = e.target.value;
+    items.appendChild(listItem);
+    e.target.value = "";
 }
+
