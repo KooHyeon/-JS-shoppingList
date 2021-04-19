@@ -17,7 +17,15 @@ inputBtn.addEventListener('click', () => {
     addList();
 })
 
+inputField.addEventListener('keydown', () => {
+    normalRunji.style.opacity = '0';
+    angryRunji.style.opacity = '100%';
+})
+
 function addList(){
+    normalRunji.style.opacity = '100%';
+    angryRunji.style.opacity = '0';
+
     const listItem = document.createElement('div');
     const itemText = document.createElement('li');
     const deleteBtn = document.createElement('button');
@@ -30,7 +38,6 @@ function addList(){
 
     deleteBtn.addEventListener('click', deleteItem);
 
-    normalRunji.style.display = hidden;
 }
 
 function deleteItem (e) {
