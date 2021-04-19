@@ -19,7 +19,7 @@ body {
     position: relative;
     width: 320px;
     height: 568px;
-    background-image: url(./assets/list_background.png);
+    background-image: url(./img/list_background.png);
     background-repeat: no-repeat;
     background-size: contain;
 }
@@ -63,7 +63,7 @@ body {
 }
 
 .delete-btn {
-    background-image: url(./assets/list_deleteBtn.png);
+    background-image: url(./img/list_deleteBtn.png);
     background-repeat: no-repeat;
     background-size: contain;
     width:18px;
@@ -97,7 +97,7 @@ body {
     background-color: white;
     background-repeat: no-repeat;
     background-size: contain;
-    background-image: url(./assets/list_inputBtn.png);
+    background-image: url(./img/list_inputBtn.png);
     border: none;
 }
 
