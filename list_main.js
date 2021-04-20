@@ -14,7 +14,8 @@ form.addEventListener('submit', (e)=>{
 });
 
 inputBtn.addEventListener('click', () => {
-    addList();
+    onAddList();
+    inputField.value = "";
 })
 
 inputField.addEventListener('keydown', () => {
@@ -22,30 +23,20 @@ inputField.addEventListener('keydown', () => {
     angryRunji.style.opacity = '100%';
 })
 
-function addList(){
+function onAddList(e){
     normalRunji.style.opacity = '100%';
     angryRunji.style.opacity = '0';
 
     const listItem = document.createElement('div');
-    const itemText = document.createElement('li');
-    const deleteBtn = document.createElement('button');
-    itemText.textContent = inputField.value;
-    deleteBtn.classList.add('delete-btn');
+    listItem.innerHTML = `
+        <button class="delete-btn"></button>
+        <li>${inputField.value}</li>
+    `;
     items.appendChild(listItem);
-    listItem.appendChild(deleteBtn);
-    listItem.appendChild(itemText);
-    inputField.value = "";
-
-    deleteBtn.addEventListener('click', deleteItem);
-
 }
 
-function deleteItem (e) {
-    const btn = e.target;
-    const item = btn.nextSibling;
-    const list = btn.parentNode;
-    list.removeChild(item);
-    list.removeChild(btn);
-    list.remove();
-}
+items.addEventListener('click', (e) => {
+    e.target.parentNode.remove();
+})
+
 

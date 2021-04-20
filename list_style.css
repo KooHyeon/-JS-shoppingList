@@ -16,6 +16,7 @@ body {
 }
 
 .list {
+    margin: 10% auto;
     position: relative;
     width: 320px;
     height: 568px;
@@ -62,6 +63,10 @@ body {
     margin-bottom: 22px;
 }
 
+.list-items div:nth-of-type(n+10){
+    display: none;
+}
+
 .delete-btn {
     background-image: url(./img/list_deleteBtn.png);
     background-repeat: no-repeat;
@@ -101,10 +106,3 @@ body {
     border: none;
 }
 
-@media screen and (min-width: 768px) {
-    .list {
-        position: relative;
-        left: 40%;
-        top: 10%;
-    }
-}
